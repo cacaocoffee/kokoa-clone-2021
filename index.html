@@ -19,41 +19,90 @@
 
     아이콘 
     HEROICONS 
-    
+    가서 검색하고 SVG로 복사해서 붙여넣기하면됨
+    css를 통해 사이즈를 조절할 수 있다.
+
+    fontAwesome 이 또 유명함
+    code kit을 주는데 그걸로 사용하면된다.
+    이메일 통해서 하는데 이것도 복붙하면된다.
+    모든 아이콘은 자기만의 이름이 있다.
+    여기서 주는 코드 킷을 복사해서 써야한다
+    여기서 주는 스크립트는 항상 마지막에 있어야한다 여기서 말하는 마지막이란 body
+    태그를 닫기 직전이다.
+
+    alt 방향키는 줄이동.
+
+    css연결 단축키 link:css 엔터 
+     href="style.css" 로 나오니 경로 바꾸는거 잊지말것
+
+     css에서 font-family: 를 하면 다양한옵션의 폰트들이 등장한다. 
+     니꼬쌤은 apple-system을 선호하신다. 이뒤에 있는것들은 맨앞 스타일이 없다면
+      그다음 스타일을 설정하는 의미이다.
+      font를 가지고 싶다면 google fonts에 들어가서 맘에드는 폰트를 찾고 클릭하구
+      select this style 을 누르고 embed 에서 
+      1.html 에 link 사용              <link> 사용
+      2.css에 추가                     import 사용
+      두가지 방법이 있다.
+      만약 여러 옵션이 있다면 쓸거 하나만 가져오자
+      가장 많이 쓰는 Open sans를 보자 우리는 많은 폰트가 필요하지 않다
+      regular만 선택 semi-bold도 선택
+      css에 import를 넣고 믿에 있는 font-family를 복붙해서 사용하면 된다.
+      모든 폰트를 추가한다면 웹사이트가 무거워진다.
+
+
+    css hack 은 레시피 같은거다 좀 이상한데 작동이 잘된다
+      그래서 HACK 이라고 하는 거다 
+      justify-content에 space-between  대신 center를 넣는다
+      그다음 모든 column에 33%의 width를 가지게한다.
+
+  fontAwesome에 아ㅣㅇ콘을 크게 만드는 기능이있다.
+  아이콘 뒤에 fa-2x 이런식으로 하면 사용할 수 있다.
+  fa-lg도 사용가능하다.
+
+  리셋 CSS는 CSS파일이다 
+  대부분의 태그에 margin을 0으로 하는 설정이다. 
+  검색해서 복사하고 reset.css를 만들어서 붙여넣고
+   자신의 css 파일에 @import "reset.css"라고 적어주면된다.
  -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="css/styles.css">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome to Kokoa Talk</title>
   </head>
   <body>
-    <div id="status-bar">
-      <div class="status-bar__colum">
+    <div class="status-bar">
+      <div class="status-bar__column">
         <span>NO Service</span>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M17.778 8.222c-4.296-4.296-11.26-4.296-15.556 0A1 1 0 01.808 6.808c5.076-5.077 13.308-5.077 18.384 0a1 1 0 01-1.414 1.414zM14.95 11.05a7 7 0 00-9.9 0 1 1 0 01-1.414-1.414 9 9 0 0112.728 0 1 1 0 01-1.414 1.414zM12.12 13.88a3 3 0 00-4.242 0 1 1 0 01-1.415-1.415 5 5 0 017.072 0 1 1 0 01-1.415 1.415zM9 16a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z"
-            clip-rule="evenodd"
-          />
+        <i class="fas fa-wifi"></i>
         </svg>
       </div>
-      <div class="status-bar__colum">
+      <div class="status-bar__column">
         <span>18:43</span>
       </div>
-      <div class="status-bar__colum">
+      <div class="status-bar__column">
         <span>110%</span>
-        <!-- Battery Icon-->
-        <!-- Lightning Icon-->
+        <i class="fas fa-battery-full fa-2x"></i>
+        <i class="fas fa-bolt"></i>
       </div>
     </div>
+    <header class="welcome-header">
+      <h1 class="welcome-header__title">Welcome to Kokoa Clone</h1>
+      <p class="welcome-header__text">If you have a Kakao Account, log in with your email or phone number.</p>
+    </header>
+
+    <form id="login-form">
+      <input type="text" placeholder="Email or phone number"/>
+      <input type="password" placeholder="Password"/>
+      <input type="submit" value="Log In"/>
+      <a href="#">Find Kokoa Account or Password</a>
+    </form>
+    <script 
+    src="https://kit.fontawesome.com/854b33dea1.js" 
+    crossorigin="anonymous"
+    ></script>
   </body>
 </html>
